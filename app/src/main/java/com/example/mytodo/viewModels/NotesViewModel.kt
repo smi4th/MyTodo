@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import com.example.mytodo.models.Note
 import com.example.mytodo.repositories.NoteRepository
 import kotlin.random.Random
-import kotlin.random.nextInt
 
 class NotesViewModel: ViewModel() {
 
@@ -13,6 +12,10 @@ class NotesViewModel: ViewModel() {
 
     private val _notes = mutableStateListOf<Note>().apply { addAll(repo.getAllNotes()) }
     val notes: List<Note> = _notes
+
+    // Add query State
+    // Add filter function
+
 
     fun addSampleNote() {
         var id: Int

@@ -34,62 +34,60 @@ fun BottomBar(
     onProfile: () -> Unit,
 ) {
 
-    Surface {
 
-        Box(
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(100.dp)
+            .padding(16.dp),
+    ) {
+
+        Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(100.dp)
-                .padding(16.dp),
+                .height(64.dp)
+                .padding(horizontal = 30.dp)
+                .clip(RoundedCornerShape(32.dp))
+                .background(Color(0xFFE6D3F8)),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceAround
         ) {
+            IconButton(onClick = onHome) {
+                Icon(
+                    Icons.Outlined.Home,
+                    contentDescription = "Home Button",
+                    tint = Color(0xFFAF97FF),
+                    modifier = Modifier.size(35.dp)
+                )
+            }
 
-            Row(
+            Box(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .height(64.dp)
-                    .padding(horizontal = 30.dp)
-                    .clip(RoundedCornerShape(32.dp))
-                    .background(Color(0xFFE6D3F8)),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.SpaceAround
+                    .size(56.dp)
+                    .clip(CircleShape)
+                    .background(Color(0xFF4A0CF8)),
+                contentAlignment = Alignment.Center
             ) {
-                IconButton(onClick = onHome) {
+                IconButton(onClick = onAdd) {
                     Icon(
-                        Icons.Outlined.Home,
-                        contentDescription = "Home Button",
-                        tint = Color(0xFFAF97FF),
-                        modifier = Modifier.size(35.dp)
-                    )
-                }
-
-                Box(
-                    modifier = Modifier
-                        .size(56.dp)
-                        .clip(CircleShape)
-                        .background(Color(0xFF4A0CF8)),
-                    contentAlignment = Alignment.Center
-                ) {
-                    IconButton(onClick = onAdd) {
-                        Icon(
-                            Icons.Outlined.Add,
-                            contentDescription = "Add Button",
-                            tint = Color.White,
-                            modifier = Modifier.size(30.dp)
-                        )
-                    }
-                }
-
-                IconButton(onClick = onProfile) {
-                    Icon(
-                        Icons.Outlined.Person,
-                        contentDescription = "Profile Button",
-                        tint = Color(0xFF4A0CF8),
-                        modifier = Modifier.size(35.dp),
+                        Icons.Outlined.Add,
+                        contentDescription = "Add Button",
+                        tint = Color.White,
+                        modifier = Modifier.size(30.dp)
                     )
                 }
             }
 
+            IconButton(onClick = onProfile) {
+                Icon(
+                    Icons.Outlined.Person,
+                    contentDescription = "Profile Button",
+                    tint = Color(0xFF4A0CF8),
+                    modifier = Modifier.size(35.dp),
+                )
+            }
         }
+
     }
 
 }

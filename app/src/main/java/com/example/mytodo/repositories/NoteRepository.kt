@@ -16,6 +16,16 @@ class NoteRepository {
         Note(8, "Project Plan", "Research, design, implementation, testing, deployements...", colorIndex= NoteColor.LIGHT_PURPLE),
         Note(9, "Hello World!", "Lorem Ipsum dolor sit amet, consectetur adipiscing elit...", colorIndex= NoteColor.PURPLE),
         Note(10, "Work Meeting Notes", "Discussed progress on project X, deadlines, and...", colorIndex= NoteColor.LIGHT_PURPLE),
+        Note(1, "Hello World!", "Lorem Ipsum dolor sit amet, consectetur adipiscing elit...", colorIndex= NoteColor.PURPLE),
+        Note(2, "Work Meeting Notes", "Discussed progress on project X, deadlines, and...", colorIndex= NoteColor.LIGHT_PURPLE),
+        Note(3, "Class Notes", "Lecture on Biology: DNA structures and replication...", colorIndex= NoteColor.DARK_PURPLE),
+        Note(4, "Project Plan", "Research, design, implementation, testing, deployements...", colorIndex= NoteColor.LIGHT_PURPLE),
+        Note(5, "Hello World!", "Lorem Ipsum dolor sit amet, consectetur adipiscing elit...", colorIndex= NoteColor.PURPLE),
+        Note(6, "Work Meeting Notes", "Discussed progress on project X, deadlines, and...", colorIndex= NoteColor.LIGHT_PURPLE),
+        Note(7, "Class Notes", "Lecture on Biology: DNA structures and replication...", colorIndex= NoteColor.DARK_PURPLE),
+        Note(8, "Project Plan", "Research, design, implementation, testing, deployements...", colorIndex= NoteColor.LIGHT_PURPLE),
+        Note(9, "Hello World!", "Lorem Ipsum dolor sit amet, consectetur adipiscing elit...", colorIndex= NoteColor.PURPLE),
+        Note(10, "Work Meeting Notes", "Discussed progress on project X, deadlines, and...", colorIndex= NoteColor.LIGHT_PURPLE),
     )
 
     fun addNote(note: Note) = notes.add(note)
